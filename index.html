@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Word Hunt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="top-bar">
+            <h1>Word Search</h1>
+            <div class="controls">
+                <button id="hint-btn">💡 Hint</button>
+                <button id="reset-btn">Reset Selection</button>
+                <button id="new-game-btn">New Game</button>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <aside class="left-panel">
+                <div class="stats-card">
+                    <div class="stat">
+                        <span class="stat-label">Words</span>
+                        <span id="score-display" class="stat-value">0/8</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Timer</span>
+                        <span id="timer-display" class="stat-value">00:00</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Points</span>
+                        <span id="points-display" class="stat-value">0</span>
+                    </div>
+                </div>
+                <h2>Words to Find</h2>
+                <ul id="word-list"></ul>
+            </aside>
+
+            <main class="center-panel">
+                <div id="word-grid" class="word-grid"></div>
+            </main>
+        </div>
+
+        <footer>
+            <p>Click and drag to select a word. Highest Points: <span id="high-score">0</span></p>
+        </footer>
+    </div>
+
+    <!-- Modals and Toasts -->
+    <div id="win-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>🎉 You mastered Tech Word Hunt! 🎉</h2>
+            <p>Final Points: <span id="final-score">0</span></p>
+            <p>Time: <span id="final-time">00:00</span></p>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
